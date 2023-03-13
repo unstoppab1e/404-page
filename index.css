@@ -6,22 +6,46 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    background: white;
 }
 
 .main {
     display: flex;
+    flex-direction:row;
     flex-wrap: wrap;
     gap: 3.75rem;
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin-bottom: 20px;
+}
+
+.right{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.dark-theme{
+    margin-top: 38px;
+    margin-right: 40px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    
 }
 
 .title {
-    width: 133px;
-    height: 25px;
+    width: 100%;
+    
+    flex-direction: row;
+    max-width: 133px;
     margin: 40px 77px;
+    
 
     font-family: 'Inconsolata', monospace;
     font-size: 24px;
@@ -32,14 +56,12 @@ body {
 }
 
 img {
-    height: 448px;
-    width: 540px;
+    max-width: 540px;
     border-radius: 0px;
 }
 
 .h1 {
-    width: 586px;
-    height: 190px;
+    max-width: 586px;
 
     font-family: 'Space Mono';
     font-style: normal;
@@ -52,8 +74,7 @@ img {
 }
 
 .content {
-    width: 381px;
-    height: 108px;
+    max-width: 381px;
     padding: 2rem 0;
 
     font-family: 'Space Mono';
@@ -81,32 +102,35 @@ button {
     width: 216px;
     height: 68px;
     border: 0;
-
+    cursor: pointer;
     background: #333333;
 }
 
-p {
-    width: 287px;
-    height: 17px;
-    display: flex;
+footer {
     justify-content: center;
     text-align: center;
+    padding: 20px;
     
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-
     color: #BDBDBD;
+    position: relative;
+    margin-top: auto;
+}
+
+a {
+    color: #BDBDBD;
+    padding: 0 5px;
 }
 
 button:hover {
     background-color: #FF6D5B;
 }
 
-p:hover {
+a:hover {
     color: #FF6D5B;
 }
 
@@ -119,12 +143,12 @@ p:hover {
       }
     .main {
         justify-content: center;
+        gap: 0;
         text-align: left;
-        padding: 0px 20px;
+        
     }
     .title{
-        width: 133px;
-        height: 25px;
+        width: 100%;
         margin: 20px 24px;
 
     }
@@ -133,13 +157,14 @@ p:hover {
         width: 350px;
         height: 142px;
         padding: 0;
+        line-height: 70px;
 
     }
 
     .content{
-        width: 328px;
-        height: 81px;
+        max-width: 328px;
         margin: 0;
+        
     }
 
     button {
@@ -153,8 +178,8 @@ p:hover {
         max-width: 286px;
         max-height: 238px;
     }
-
-    p {
-        padding-bottom: 20px;
+    footer{
+        position: relative;
+        bottom: 0;
     }
 }
