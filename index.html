@@ -11,15 +11,35 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="title">404 Not Found</div>
+    <div class="top">
+        <div class="title">404 Not Found</div>
+        <button class="dark-theme" onclick="dark()">dark mode</button>
+    </div>
+    
     <div class="main">     
         <div class="left">
             <img src="scarecrow.png" alt="scarecrow">
         </div>
-        <div class="h1">I have bad news for you</div>
-        <div class="content">The page you are looking for might be removed or is temporarily unavailable</div>
-        <button>Back to Hompage</button>     
-        <p>created by abdr. - devChallenges.io</p>
+        <div class="right">
+            <div class="h1">I have bad news for you</div>
+            <div class="content">The page you are looking for might be removed or is temporarily unavailable</div>
+            <button>Back to Hompage</button> 
+        </div>            
+        
     </div>
+    <footer>created by <a href="https://github.com/unstoppab1e">abdr.</a> - devChallenges.io</footer>
 </body>
+<script>
+    function dark(){
+        if(document.querySelector("body").style.background==="white"){
+            let a=document.querySelector("body").style.color="white";
+            return document.querySelector("body").style.background="black";
+        }
+        else{
+            let a=document.querySelector("body").style.color="black";
+            return document.querySelector("body").style.background="white";
+        }
+    }
+    
+</script>
 </html>
